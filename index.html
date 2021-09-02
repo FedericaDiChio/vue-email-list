@@ -12,9 +12,10 @@
 <body>
     <div id="root" >
         <div>
-            <ul>
+            <ul v-if="emails.length == 10">
                 <li v-for="email in sortedEmails">{{ email }}</li>
             </ul>
+            <i v-else class="fas fa-circle-notch fa-spin"></i>
         </div>
     </div>
     <script src="./script.js"></script>
